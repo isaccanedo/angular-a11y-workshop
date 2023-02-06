@@ -1,0 +1,16 @@
+
+<ul class="cards">
+  <li *ngFor="let cat of catsArray" class="cards__item">
+    <figure *ngIf="cat.imgUrl">
+      <img [src]="cat.imgUrl" alt="">
+      <figcaption>Photo by {{cat.imgCredit}}</figcaption>
+    </figure>
+    <article class="cards__article">
+      <h2>{{cat.name}}</h2>
+      <span class="breed">{{cat.breed}}</span>
+      <p>{{cat.description}}</p>
+    </article>
+  </li>
+</ul>
+
+<a routerLink="/catalog/add" class="button">Add new cat</a>
